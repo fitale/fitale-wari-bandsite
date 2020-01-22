@@ -1,0 +1,16 @@
+.hero {
+    background-image: url('../assets/Images/photo6.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 180px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    &__title {    
+        margin-top: 0;
+        margin-left: 16px;
+        @include mobile-header;
+        color: $white;
+        width: 75%;
+    }
+}
