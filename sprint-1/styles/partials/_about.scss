@@ -1,0 +1,113 @@
+.about {
+    @include mobile-header;
+    margin-left: 16px;
+    margin-right: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__title {
+        align-self: flex-start;
+        margin-top: 32px;
+        margin-bottom: 24px;
+    }
+    &__image {
+        text-align: center;
+        &--size {
+            width: 90vw;
+        }
+    }
+    &__quote {
+        @include mobile-subheader;
+        margin-top: 24px;
+        margin-bottom: 32px;
+        &--artist {
+            margin: 0;
+            @include mobile-subheader;
+        }
+    }
+    &__artist {
+        @include mobile-subheader;
+        margin: 40px 0 24px;
+    }
+    &__container {
+        @include mobile-paragraph;
+        font-family: AvenirRegular;
+        display: flex;
+        flex-direction: column;
+        &--paragraph {
+            margin: 0 0 40px;
+        }
+    }
+}
+
+@include medium {
+    .about {
+        margin: 0 24px;
+        &__title {
+            @include desk-tablet-header;
+            margin-top: 60px;
+            margin-bottom: 40px;
+        }
+        &__image {
+                &--size {
+                    width: 94vw;
+                    height: 47vw;
+                    object-fit: cover;
+                }
+        }
+        &__quote {
+            @include desk-tablet-header-smaller;
+            &--artist {
+                @include desk-tablet-subheader;
+                font-family: AvenirDemi;
+            }
+        }
+        &__artist {
+            @include desk-tablet-header-smaller;
+        }
+        &__container {
+            flex-direction: row;
+            &--paragraph.left {
+                margin-right: 12px;
+            }
+            &--paragraph.right {
+                margin-left: 12px;
+            }
+        }
+    }
+}
+
+@include huge {
+    .about {
+        margin: 0 180px;
+        &__title {
+            margin: 48px 0;
+        }
+        &__image {
+            &--size {
+                width: 62vw;
+                height: 31vw;
+            }
+        }
+        &__quote {
+            margin: 48px 92px 40px;
+            &--artist {
+                margin: 0 92px;
+            }
+        }
+        &__artist {
+            margin: 56px 92px 32px;
+        }
+        &__container {
+            &--paragraph {
+                width: 29vw;
+            }
+            &--paragraph.left {
+                margin: 0 20px 48px 92px;
+            }
+            &--paragraph.right {
+                margin: 0 92px 48px 20px;
+            }
+        }
+    }
+}
