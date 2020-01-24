@@ -34,7 +34,10 @@
         font-family: AvenirRegular;
         display: flex;
         flex-direction: column;
-        &--paragraph {
+        &--paragraph.left {
+            margin-top: 0;
+        }
+        &--paragraph.right {
             margin: 0 0 40px;
         }
     }
@@ -66,12 +69,15 @@
             @include desk-tablet-header-smaller;
         }
         &__container {
+            margin-bottom: 40px;
             flex-direction: row;
             &--paragraph.left {
                 margin-right: 12px;
+                margin-bottom: 0;
             }
             &--paragraph.right {
                 margin-left: 12px;
+                margin-bottom: 0;
             }
         }
     }
@@ -99,6 +105,7 @@
             margin: 56px 92px 32px;
         }
         &__container {
+            margin-bottom: 0;
             &--paragraph {
                 width: 29vw;
             }
