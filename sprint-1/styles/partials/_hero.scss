@@ -16,28 +16,20 @@
 
 @include medium {
     .hero {
-        height: 400px;
+        height: 52vw;
         &__title {
             @include desk-tablet-hero;
             margin-left: 24px;
-            &__overlay {
-                height: 400px;
-                width: 100%;
-            }
         }
     }
 }
 
 @include huge {
     .hero {
-        height: 670px;
+        height: 47vw;
         &__title {
             margin-left: 180px;
             width: 45%;
-            &__overlay {
-                height: 670px;
-                width: 100%;
-            }
         }
     }
 }

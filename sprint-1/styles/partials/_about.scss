@@ -1,7 +1,6 @@
 .about {
     @include mobile-header;
-    margin-left: 16px;
-    margin-right: 16px;
+    margin: 0 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,7 +10,7 @@
         margin-bottom: 24px;
     }
     &__image {
-        text-align: center;
+        align-self: center;
         &--size {
             width: 90vw;
         }
@@ -34,11 +33,11 @@
         font-family: AvenirRegular;
         display: flex;
         flex-direction: column;
-        &--paragraph.left {
+        &--paragraph {
             margin-top: 0;
-        }
-        &--paragraph.right {
-            margin: 0 0 40px;
+            &.right {
+                margin-bottom: 40px;
+            }
         }
     }
 }
@@ -71,13 +70,15 @@
         &__container {
             margin-bottom: 40px;
             flex-direction: row;
-            &--paragraph.left {
-                margin-right: 12px;
-                margin-bottom: 0;
-            }
-            &--paragraph.right {
-                margin-left: 12px;
-                margin-bottom: 0;
+            &--paragraph {
+                &.left {
+                    margin-right: 12px;
+                    margin-bottom: 0;
+                }
+                &.right {
+                    margin-left: 12px;
+                    margin-bottom: 0;
+                }
             }
         }
     }
@@ -108,12 +109,12 @@
             margin-bottom: 0;
             &--paragraph {
                 width: 29vw;
-            }
-            &--paragraph.left {
-                margin: 0 20px 48px 92px;
-            }
-            &--paragraph.right {
-                margin: 0 92px 48px 20px;
+                &.left {
+                    margin: 0 20px 48px 92px;
+                }
+                &.right {
+                    margin: 0 92px 48px 20px;
+                }
             }
         }
     }

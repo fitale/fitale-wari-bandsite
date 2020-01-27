@@ -13,7 +13,6 @@
   src: url("../assets/fonts/AvenirNextLTProDemi.otf");
 }
 
-/* mobile-lists-contact info same as mobile-paragraph */
 html,
 body {
   margin: 0;
@@ -32,60 +31,38 @@ body {
 
 /* global */
 /* instock colors */
-/* nav bg fill in instock is the same as $paragraph */
 /* brainflix */
-/* nav bg fill in brainflix is the same as $paragraph */
-/* bandsite */
-/* nav bg fill and primary CTA in bandsite is the same as $paragraph */
-/* primary hover in bandsite is the same as brainflix */
-/* media query for mobile 
-
-@mixin small {
-    @media only screen and (max-width: 767px) {
-        @content;
-    }
-} */
 /* media query for tablet */
-/* media query for landscape, medium px density desktop 
-
-@mixin large {
-    @media only screen and (min-width: 1024px) {
-        @content;
-    }
-} */
 /* media query for high px density desktop */
 .header {
   background-color: #323232;
   height: 80px;
   width: 100%;
+  text-align: center;
 }
 
 .header__title {
   font-size: 24px;
   line-height: 32px;
   font-family: AvenirBold;
-  text-align: center;
+  font-size: unset;
   margin-top: 0;
   margin-bottom: 16px;
 }
 
 .header__title--image {
   width: 125px;
-  margin-top: 7px;
+  margin-top: 5px;
 }
 
 .header__nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .header__nav-item {
   width: 50%;
-  text-align: center;
   color: #AFAFAF;
   margin: 0;
   padding-bottom: 2px;
@@ -163,7 +140,7 @@ body {
 
 @media only screen and (min-width: 768px) {
   .hero {
-    height: 400px;
+    height: 52vw;
   }
   .hero__title {
     font-size: 60px;
@@ -171,23 +148,15 @@ body {
     font-family: AvenirBold;
     margin-left: 24px;
   }
-  .hero__title__overlay {
-    height: 400px;
-    width: 100%;
-  }
 }
 
 @media only screen and (min-width: 1440px) {
   .hero {
-    height: 670px;
+    height: 47vw;
   }
   .hero__title {
     margin-left: 180px;
     width: 45%;
-  }
-  .hero__title__overlay {
-    height: 670px;
-    width: 100%;
   }
 }
 
@@ -195,8 +164,7 @@ body {
   font-size: 24px;
   line-height: 32px;
   font-family: AvenirBold;
-  margin-left: 16px;
-  margin-right: 16px;
+  margin: 0 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -217,7 +185,9 @@ body {
 }
 
 .about__image {
-  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .about__image--size {
@@ -259,12 +229,12 @@ body {
           flex-direction: column;
 }
 
-.about__container--paragraph.left {
+.about__container--paragraph {
   margin-top: 0;
 }
 
 .about__container--paragraph.right {
-  margin: 0 0 40px;
+  margin-bottom: 40px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -360,6 +330,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #FAFAFA;
+  padding-bottom: 40px;
 }
 
 .gallery__title {
@@ -397,7 +368,7 @@ body {
 
 @media only screen and (min-width: 768px) {
   .gallery {
-    padding: 0 24px;
+    padding: 0 24px 30px;
   }
   .gallery__title {
     font-size: 36px;
@@ -427,7 +398,7 @@ body {
 
 @media only screen and (min-width: 1440px) {
   .gallery {
-    padding: 0 180px;
+    padding: 0 180px 40px;
   }
   .gallery__title {
     margin: 48px 0 64px;
@@ -477,7 +448,6 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  padding-bottom: 20px;
 }
 
 .footer__name {
@@ -497,7 +467,7 @@ body {
   font-size: 13px;
   line-height: 18px;
   color: #AFAFAF;
-  width: 55vw;
+  width: 220px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -524,7 +494,7 @@ body {
     font-family: AvenirBold;
   }
   .footer__icon {
-    padding: 0;
+    padding: 25px 0 0;
     margin-left: 72px;
   }
   .footer__icon--size {
@@ -555,6 +525,7 @@ body {
   .footer__copyright {
     font-size: 14px;
     line-height: 20px;
+    width: unset;
   }
 }
 
@@ -562,12 +533,20 @@ body {
   .footer {
     padding: 48px 180px 40px;
   }
+  .footer__container-top {
+    margin-bottom: 56px;
+  }
   .footer__logo {
     width: 8vw;
     height: 2vw;
+    margin: 11px 0 0;
   }
   .footer__title {
-    margin-bottom: 56px;
+    padding: 0;
+  }
+  .footer__icon {
+    padding: 8px 0 0;
+    margin-left: 85px;
   }
   .footer__icon--size {
     margin: 0;
@@ -579,8 +558,13 @@ body {
     margin-right: 32px;
   }
   .footer__container-bottom {
-    margin: 0 0 48px;
-    padding: 0;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin: 0 0 40px;
+  }
+  .footer__container-bottom--width {
+    margin-right: 80px;
   }
   .footer__name {
     margin: 0;

@@ -1,37 +1,36 @@
 .header {
     background-color: $paragraph;
     height: 80px;
-    width: 100%;
+    width: 100%;            
+    text-align: center;
     &__title {
         @include mobile-header;
-        text-align: center;
+        font-size: unset;
         margin-top: 0;
         margin-bottom: 16px;
         &--image {
             width: 125px;
-            margin-top: 7px;
+            margin-top: 5px;
         }
     }
     &__nav {
         display: flex;
-        justify-content: center;
     }
     &__nav-item {
             width: 50%;
-            text-align: center;
             color: $text-label;
             margin: 0;
             padding-bottom: 2px;
             @include mobile-subheader;
             border-bottom: 4px solid transparent;
-        }
-        &__nav-item:hover {
+            &:hover {
             cursor: pointer;
             border-bottom: 4px solid $white;
-        }
-        &__nav-item.active {
-            cursor: pointer;
-            border-bottom: 4px solid $white;
+            }
+            &.active {
+                cursor: pointer;
+                border-bottom: 4px solid $white;
+            }
         }
 }
 

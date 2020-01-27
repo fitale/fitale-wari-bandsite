@@ -21,7 +21,6 @@
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        padding-bottom: 20px;
     }
     &__name {
         @include mobile-subheader;
@@ -34,7 +33,7 @@
     &__copyright {
         @include mobile-paragraph;
         color: $text-label;
-        width: 55vw;
+        width: 220px;
     }
 }
 
@@ -55,7 +54,7 @@
             @include desk-tablet-header;
         }
         &__icon {
-            padding: 0;
+            padding: 25px 0 0;
             margin-left: 72px;
             &--size {
                 width: 3vw;
@@ -67,7 +66,6 @@
             flex-direction: row;
             justify-content: space-between;
             &--width {
-                // width: 30vw;
             }
         }
         &__name {
@@ -78,6 +76,7 @@
         }
         &__copyright {
             @include desk-tablet-lists-contact;
+            width: unset;
         }
     }
 }
@@ -85,14 +84,20 @@
 @include huge {
     .footer {
         padding: 48px 180px 40px;
+        &__container-top {
+            margin-bottom: 56px;
+        }
         &__logo {
             width: 8vw;
             height: 2vw;
+            margin: 11px 0 0;
         }
         &__title {
-            margin-bottom: 56px;
+            padding: 0;
         }
         &__icon {
+            padding: 8px 0 0;
+            margin-left: 85px;
             &--size {
                 margin: 0;
                 width: 1.5vw;
@@ -104,8 +109,11 @@
             }
         }
         &__container-bottom {
-            margin: 0 0 48px;
-            padding: 0;
+            justify-content: flex-start;
+            margin: 0 0 40px;
+            &--width {
+                margin-right: 80px;
+            }
         }
         &__name {
             margin: 0;
