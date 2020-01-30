@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'AvenirRegular';
+    src: url('../assets/fonts/AvenirNextLTProRegular.otf');
+}
+
+@font-face {
+    font-family: 'AvenirBold';
+    src: url('../assets/fonts/AvenirNextLTProBold.otf');
+}
+
+@font-face {
+    font-family: 'AvenirDemi';
+    src: url('../assets/fonts/AvenirNextLTProDemi.otf');
+}
+
+@mixin mobile-header {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: AvenirBold;
+}
+
+@mixin mobile-subheader {
+    font-size: 14px;
+    line-height: 22px;
+    font-family: AvenirDemi;
+}
+
+@mixin mobile-paragraph {
+    font-size: 13px;
+    line-height: 18px;
+    font-family: AvenirRegular;
+}
+
+@mixin mobile-labels {
+    font-size: 12px;
+    line-height: 20px;
+    font-family: AvenirDemi;
+}
+
+
+@mixin desk-tablet-hero {
+    font-size: 60px;
+    line-height: 68px;
+    font-family: AvenirBold;
+}
+
+@mixin desk-tablet-header {
+    font-size: 36px;
+    line-height: 44px;
+    font-family: AvenirBold;
+}
+
+@mixin desk-tablet-header-smaller {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: AvenirBold;
+}
+
+@mixin desk-tablet-subheader {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: AvenirDemi;
+}
+
+@mixin desk-tablet-para-comment {
+    font-size: 14px;
+    line-height: 22px;
+    font-family: AvenirRegular;
+}
+
+@mixin desk-tablet-lists-contact {
+    font-size: 14px;
+    line-height: 20px;
+    font-family: AvenirRegular;
+}
+
+@mixin desk-tablet-labels {
+    font-size: 12px;
+    line-height: 20px;
+}

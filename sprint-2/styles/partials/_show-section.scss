@@ -1,0 +1,76 @@
+.shows {
+    margin: 32px 16px 30px;
+    &__title {
+        @include mobile-header;
+        margin: 0 0 40px;
+        &--header {
+            display: none;
+        }
+    }
+    &__div {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 20px;
+         &--header {
+            margin: 0 0 16px;
+            @include mobile-labels;
+            color: $text-label;
+        }
+        &--date {
+            margin: 0 0 24px;
+            @include mobile-subheader;
+        }
+        &--venueCityLocation {
+            margin: 0 0 32px;
+            @include mobile-paragraph;
+        }
+        &--button-container {
+            align-self: center;
+            border-bottom: 1px solid $text-border;
+            padding: 0 0 16px;
+        }
+        &--button {
+            background-color: $paragraph;
+            width: 90vw;
+            height: 15vw;
+            color: $white;
+            border-radius: 5px;
+        }
+    }
+}
+
+@include medium {
+    .shows {
+        margin: 0 24px;
+        &__title {
+            @include desk-tablet-header;
+            margin: 40px 0 30px;
+            &--header {
+                display: unset;
+                display: flex;
+                justify-content: left;
+            }
+            &--header-title{
+            visibility: visible;
+            color: $text-label;
+            @include desk-tablet-labels;
+            font-family: AvenirDemi;
+            }
+        }
+        &__div {
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            &--header {
+            visibility: hidden;
+            }
+            // &--button-container {
+            //     margin-left: 70px;
+            // }
+            &--button {
+                width: 20vw;
+                height: 5vw;
+            }
+        }
+    }
+}
