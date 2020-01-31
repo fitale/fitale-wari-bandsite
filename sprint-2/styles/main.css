@@ -717,12 +717,19 @@ body {
   width: 90vw;
   height: 15vw;
   color: #fff;
-  border-radius: 5px;
+  border-radius: 4px;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.shows__div--button:hover {
+  cursor: pointer;
+  background-color: #000;
 }
 
 @media only screen and (min-width: 768px) {
   .shows {
-    margin: 0 24px;
+    margin: 0 24px 40px;
   }
   .shows__title {
     font-size: 36px;
@@ -735,9 +742,9 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .shows__title--header-title {
     visibility: visible;
@@ -745,25 +752,50 @@ body {
     font-size: 12px;
     line-height: 20px;
     font-family: AvenirDemi;
+    width: 20vw;
+  }
+  .shows__title--header-title.hidden {
+    visibility: hidden;
   }
   .shows__div {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    border-bottom: 1px solid #E1E1E1;
   }
   .shows__div--header {
-    visibility: hidden;
+    display: none;
+  }
+  .shows__div--button-container {
+    border-bottom: unset;
   }
   .shows__div--button {
     width: 20vw;
     height: 5vw;
+  }
+  .shows__div--venueCityLocation, .shows__div--date {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    width: 20vw;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .shows {
+    margin: 48px 180px 50px;
+  }
+  .shows__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -59,6 +59,12 @@ function table(arr) {
         locationHeaderTD.appendChild(locationTitleTD);
         headerContainerTD.appendChild(locationHeaderTD);
         locationHeaderTD.className = 'shows__title--header-title';
+
+        let buttonHeaderTD = document.createElement('h5');
+        let buttonTitleTD = document.createTextNode('PURCHASE YOUR TICKET');
+        buttonHeaderTD.appendChild(buttonTitleTD);
+        headerContainerTD.appendChild(buttonHeaderTD);
+        buttonHeaderTD.className = 'shows__title--header-title hidden';
     }
     for (let i = 0; i < arr.length; i++) {
         let divContainerI = document.createElement('div');

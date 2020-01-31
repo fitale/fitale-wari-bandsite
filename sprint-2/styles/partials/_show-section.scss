@@ -34,43 +34,67 @@
             width: 90vw;
             height: 15vw;
             color: $white;
-            border-radius: 5px;
+            border-radius: 4px;
+            transition: background-color 0.5s ease-in-out;
+            &:hover {
+                cursor: pointer;
+                background-color: $black;
+            }
         }
     }
 }
 
 @include medium {
     .shows {
-        margin: 0 24px;
+        margin: 0 24px 40px;
         &__title {
             @include desk-tablet-header;
             margin: 40px 0 30px;
             &--header {
                 display: unset;
                 display: flex;
-                justify-content: left;
+                justify-content: space-between;
             }
             &--header-title{
             visibility: visible;
             color: $text-label;
             @include desk-tablet-labels;
             font-family: AvenirDemi;
+            width: 20vw;
+            &.hidden {
+                visibility: hidden;
+            }
             }
         }
         &__div {
             flex-direction: row;
-            justify-content: flex-start;
+            justify-content: space-between;
             align-items: center;
+            border-bottom: 1px solid $text-border;
             &--header {
-            visibility: hidden;
+            display: none;
             }
-            // &--button-container {
-            //     margin-left: 70px;
-            // }
+            &--button-container {
+                border-bottom: unset;
+            }
             &--button {
                 width: 20vw;
                 height: 5vw;
             }
+            &--venueCityLocation,
+            &--date {
+                align-self: center;
+                width: 20vw;
+            }
+        }
+    }
+}
+
+@include huge {
+    .shows {
+        margin: 48px 180px 50px;
+        &__title {
+            display: flex;
         }
     }
 }
