@@ -19,24 +19,24 @@ let commentArray = [
   }
 ];
 
-const form = document.getElementById("form");
-// document.getElementById("form-name").reset();
+const form = document.querySelector("form");
 form.addEventListener("submit", event => {
   event.preventDefault();
   let commentContainer = document.querySelector(".comments-container");
   commentContainer.innerHTML = "";
-  //   form.getElementById("form-name").value = "";
-  //   form.getElementById("form-comment").value = "";
-  //   event.getElementById("#form-name").reset();
   let newComment = {};
   newComment.name = event.target.name.value;
   newComment.comment = event.target.comment.value;
+  let today = new Date();
+  newComment.date =
+    today.getMonth() + 1 + "/" + today.getDate() + "/" + today.getFullYear();
   commentArray.unshift(newComment);
+  // oldComment(commentArray);
   displayComment(commentArray);
+  document.getElementById("form").reset();
 });
 
 function displayComment(arr) {
-  //   console.log(arr);
   let commentContainer = document.querySelector(".comments-container");
 
   for (let i = 0; i < arr.length; i++) {
@@ -54,10 +54,32 @@ function displayComment(arr) {
     container.appendChild(comment);
 
     commentContainer.appendChild(container);
-    document.getElementById("form").reset();
   }
 }
 
 displayComment(commentArray);
 
-// current date function
+// function oldComment(arr) {
+//   let commentContainer = document.querySelector(".comments-container");
+//   displayComment() => {
+//     for (let i = 0; i < arr.length; i++) {
+//       let container = document.createElement("div");
+//       let name = document.createElement("h3");
+//       name.innerHTML = arr[i]["name"];
+//       container.appendChild(name);
+
+//       let date = document.createElement("p");
+//       date.innerHTML = arr[i]["date"];
+//       container.appendChild(date);
+
+//       let comment = document.createElement("p");
+//       comment.innerHTML = arr[i]["comment"];
+//       container.appendChild(comment);
+
+//       commentContainer.appendChild(container);
+//     }
+//   }
+// }
+
+// oldComment(commentArray);
+// // console.log(oldComment(commentArray));

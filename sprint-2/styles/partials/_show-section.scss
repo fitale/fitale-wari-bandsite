@@ -1,100 +1,126 @@
+// * {
+//   border: 1px solid black;
+// }
+
 .shows {
-    margin: 32px 16px 30px;
-    &__title {
-        @include mobile-header;
-        margin: 0 0 40px;
-        &--header {
-            display: none;
-        }
+  margin: 32px 16px 30px;
+  &__title {
+    @include mobile-header;
+    margin: 0 0 40px;
+    &--header {
+      display: none;
     }
-    &__div {
-        display: flex;
-        flex-direction: column;
-        margin: 0 0 20px;
-         &--header {
-            margin: 0 0 16px;
-            @include mobile-labels;
-            color: $text-label;
-        }
-        &--date {
-            margin: 0 0 24px;
-            @include mobile-subheader;
-        }
-        &--venueCityLocation {
-            margin: 0 0 32px;
-            @include mobile-paragraph;
-        }
-        &--button-container {
-            align-self: center;
-            border-bottom: 1px solid $text-border;
-            padding: 0 0 16px;
-        }
-        &--button {
-            background-color: $paragraph;
-            width: 90vw;
-            height: 15vw;
-            color: $white;
-            border-radius: 4px;
-            transition: background-color 0.5s ease-in-out;
-            &:hover {
-                cursor: pointer;
-                background-color: $black;
-            }
-        }
+  }
+  &__div {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 20px;
+    &--header {
+      margin: 0 0 16px;
+      @include mobile-labels;
+      color: $text-label;
     }
+    &--date {
+      margin: 0 0 24px;
+      @include mobile-subheader;
+    }
+    &--venueCityLocation {
+      margin: 0 0 32px;
+      @include mobile-paragraph;
+    }
+    &--button-container {
+      align-self: center;
+      border-bottom: 1px solid $text-border;
+      padding: 0 0 16px;
+    }
+    &--button {
+      background-color: $paragraph;
+      width: 90vw;
+      height: 15vw;
+      color: $white;
+      border-radius: 4px;
+      transition: background-color 0.5s ease-in-out;
+      &:hover {
+        cursor: pointer;
+        background-color: $black;
+      }
+    }
+  }
 }
 
 @include medium {
-    .shows {
-        margin: 0 24px 40px;
-        &__title {
-            @include desk-tablet-header;
-            margin: 40px 0 30px;
-            &--header {
-                display: unset;
-                display: flex;
-                justify-content: space-between;
-            }
-            &--header-title{
-            visibility: visible;
-            color: $text-label;
-            @include desk-tablet-labels;
-            font-family: AvenirDemi;
-            width: 20vw;
-            &.hidden {
-                visibility: hidden;
-            }
-            }
-        }
-        &__div {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid $text-border;
-            &--header {
-            display: none;
-            }
-            &--button-container {
-                border-bottom: unset;
-            }
-            &--button {
-                width: 20vw;
-                height: 5vw;
-            }
-            &--venueCityLocation,
-            &--date {
-                align-self: center;
-                width: 20vw;
-            }
-        }
+  .shows {
+    margin: 0 24px 30px;
+    &__title {
+      @include desk-tablet-header;
+      margin: 35px 0 0;
+      &--header {
+        // display: unset;
+      }
     }
+    &__huge-bottom {
+      &--header {
+        display: unset;
+        display: flex;
+        justify-content: space-between;
+      }
+      &--header-title {
+        color: $text-label;
+        @include desk-tablet-labels;
+        font-family: AvenirDemi;
+        width: 20vw;
+        &.hidden {
+          visibility: hidden;
+        }
+      }
+    }
+    &__div {
+      flex-direction: row;
+      justify-content: space-between;
+      border-bottom: 1px solid $text-border;
+      &--header {
+        display: none;
+      }
+      &--venueCityLocation,
+      &--date {
+        align-self: center;
+        width: 20vw;
+        margin-bottom: 24px;
+      }
+      &--button-container {
+        border-bottom: unset;
+      }
+      &--button {
+        width: 20vw;
+        height: 5vw;
+      }
+    }
+  }
 }
 
 @include huge {
-    .shows {
-        margin: 48px 180px 50px;
-        &__title {
-            display: flex;
-        }
+  .shows {
+    margin: 0 180px 50px;
+    display: flex;
+    justify-content: space-between;
+    &__title {
+      margin-top: 48px;
     }
+    &__huge-bottom {
+      margin-top: 20px;
+      margin-left: auto;
+
+      &--header-title {
+        margin-bottom: 40px;
+        width: 10vw;
+      }
+    }
+    &__div {
+      width: 56vw;
+      &--button {
+        width: 11vw;
+        height: 3vw;
+      }
+    }
+  }
 }
