@@ -5,15 +5,13 @@
     margin-bottom: 40px;
   }
   &__headshot-position {
-    // position: relative;
     display: flex;
   }
   &__headshot-img {
     border-radius: 50%;
-    height: 50px;
-    width: 55px;
+    height: 16vw;
+    width: 17vw;
     position: absolute;
-    // top: 1em;
   }
   &__form {
     display: flex;
@@ -33,14 +31,15 @@
     border: 1px solid $text-border;
     width: 70vw;
     margin-bottom: 16px;
-    // &::placeholder {
-    //   text-align: ;
-    // }
     &.small {
       height: 10vw;
     }
     &.large {
       height: 40vw;
+    }
+    &:hover {
+      cursor: pointer;
+      border-color: $black;
     }
   }
   &__form-button {
@@ -53,6 +52,36 @@
       background-color: $paragraph;
       width: 70vw;
       height: 10vw;
+      transition: background-color 0.5s ease-in-out;
+      &:hover {
+        cursor: pointer;
+        background-color: $black;
+      }
+    }
+  }
+  .comments-container {
+    margin-top: 24px;
+    &--holder {
+      border-bottom: 1px solid $text-border;
+      display: flex;
+      flex-direction: column;
+    }
+    &__name-and-date {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__name {
+      @include mobile-subheader;
+    }
+    &__date {
+      @include mobile-labels;
+      color: $text-label;
+      font-family: AvenirRegular;
+      align-self: flex-end;
+    }
+    &__comment {
+      @include mobile-paragraph;
+      margin: 16px 0 24px;
     }
   }
 }
@@ -60,12 +89,27 @@
 @include medium {
   .comments {
     margin: 40px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     &__title {
       @include desk-tablet-header;
       margin-bottom: 40px;
+      align-self: flex-start;
+    }
+    &__headshot-position {
+      position: relative;
     }
     &__headshot-img {
-      left: 5em;
+      position: absolute;
+      left: -17em;
+      height: 6vw;
+      width: 6vw;
+      top: 0.5em;
+    }
+    &__form {
+      border-bottom: unset;
+      width: 70%;
     }
     &__form-input {
       align-self: center;
@@ -78,13 +122,23 @@
       }
     }
     &__form-title {
-      padding-left: 19.5vw;
+      padding-left: 5vw;
     }
     &__form-button {
-      padding-right: 19.5vw;
+      padding-right: 5vw;
       #button {
         width: 20vw;
         height: 5vw;
+      }
+    }
+    .comments-container {
+      border-top: 1px solid $text-border;
+      width: 70%;
+      &__name-and-date {
+        justify-content: flex-start;
+      }
+      &__date {
+        margin-left: 1em;
       }
     }
   }
@@ -94,9 +148,10 @@
   .comments {
     margin: 48px 180px 40px;
     &__headshot-img {
-      // height: 3vw;
-      // width: 3vw;
-      left: 15em;
+      height: 3vw;
+      width: 3vw;
+      left: -18em;
+      top: 1em;
     }
     &__form {
       display: flex;
@@ -104,7 +159,8 @@
     }
     &__form-input {
       // align-self: center;
-      // width: 55vw;
+      width: 32vw;
+      margin-bottom: 24px;
       &.small {
         height: 3vw;
         // margin-left: 20px;
@@ -114,14 +170,21 @@
       }
     }
     &__form-title {
-      padding-left: 10vw;
+      padding-left: 10.5vw;
       align-self: flex-start;
     }
     &__form-button {
-      padding-right: 10vw;
+      padding-right: 10.5vw;
       #button {
         width: 11vw;
         height: 3vw;
+      }
+    }
+    .comments-container {
+      border-top: 1px solid $text-border;
+      width: 37vw;
+      &--holder {
+        margin: 24px 0 40px;
       }
     }
   }

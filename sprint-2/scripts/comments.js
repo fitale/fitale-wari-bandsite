@@ -19,38 +19,44 @@ let commentArray = [
   }
 ];
 
-const form = document.querySelector("form");
-form.addEventListener("submit", event => {
-  event.preventDefault();
-  let commentContainer = document.querySelector(".comments-container");
-  commentContainer.innerHTML = "";
-  let newComment = {};
-  newComment.name = event.target.name.value;
-  newComment.comment = event.target.comment.value;
-  let today = new Date();
-  newComment.date =
-    today.getMonth() + 1 + "/" + today.getDate() + "/" + today.getFullYear();
-  commentArray.unshift(newComment);
-  // oldComment(commentArray);
-  displayComment(commentArray);
-  document.getElementById("form").reset();
-});
-
 function displayComment(arr) {
   let commentContainer = document.querySelector(".comments-container");
+  const form = document.querySelector("form");
+  form.addEventListener("submit", event => {
+    event.preventDefault();
+    commentContainer.innerHTML = "";
+    let newComment = {};
+    newComment.name = event.target.name.value;
+    newComment.comment = event.target.comment.value;
+    let today = new Date();
+    newComment.date =
+      today.getMonth() + 1 + "/" + today.getDate() + "/" + today.getFullYear();
+    commentArray.unshift(newComment);
+    displayComment(commentArray);
+    document.querySelector(".comments__form").reset();
+  });
 
   for (let i = 0; i < arr.length; i++) {
     let container = document.createElement("div");
+    container.className = "comments-container--holder";
+
+    let nameAndDateContainer = document.createElement("div");
+    nameAndDateContainer.className = "comments-container__name-and-date";
+
     let name = document.createElement("h3");
     name.innerHTML = arr[i]["name"];
-    container.appendChild(name);
+    name.className = "comments-container__name";
+    nameAndDateContainer.appendChild(name);
 
     let date = document.createElement("p");
     date.innerHTML = arr[i]["date"];
-    container.appendChild(date);
+    date.className = "comments-container__date";
+    nameAndDateContainer.appendChild(date);
+    container.appendChild(nameAndDateContainer);
 
     let comment = document.createElement("p");
     comment.innerHTML = arr[i]["comment"];
+    comment.className = "comments-container__comment";
     container.appendChild(comment);
 
     commentContainer.appendChild(container);
@@ -58,28 +64,3 @@ function displayComment(arr) {
 }
 
 displayComment(commentArray);
-
-// function oldComment(arr) {
-//   let commentContainer = document.querySelector(".comments-container");
-//   displayComment() => {
-//     for (let i = 0; i < arr.length; i++) {
-//       let container = document.createElement("div");
-//       let name = document.createElement("h3");
-//       name.innerHTML = arr[i]["name"];
-//       container.appendChild(name);
-
-//       let date = document.createElement("p");
-//       date.innerHTML = arr[i]["date"];
-//       container.appendChild(date);
-
-//       let comment = document.createElement("p");
-//       comment.innerHTML = arr[i]["comment"];
-//       container.appendChild(comment);
-
-//       commentContainer.appendChild(container);
-//     }
-//   }
-// }
-
-// oldComment(commentArray);
-// // console.log(oldComment(commentArray));
