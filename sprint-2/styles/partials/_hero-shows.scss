@@ -1,52 +1,73 @@
 .hero-shows {
-    background-image: url('../assets/images/Screen Shot 2020-01-29 at 2.54.21 PM.png'); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    // height: 70vw;
+  background-image: url("../assets/images/Screen Shot 2020-01-29 at 2.54.21 PM.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 472px;
+  width: 100%;
+  margin: 0;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  &__iframe {
+    align-self: center;
+    width: 90vw;
+    height: 10em;
+  }
+  &__small-title {
+    @include mobile-subheader;
+    padding: 64px 0 10px;
     margin: 0;
-    padding: 0 16px;
-    &__small-title {
-        @include mobile-subheader;
-        padding: 64px 0 10px;
-        margin: 0;
-        color: $text-bg-fill;
-    }
-    &__large-title {
-        @include mobile-header;
-        padding-bottom: 64px;
-        margin: 0;
-        color: $text-bg-fill;
-        width: 60vw;
-    }
+    color: $text-bg-fill;
+  }
+  &__large-title {
+    @include mobile-header;
+    padding-bottom: 64px;
+    margin: 0;
+    color: $text-bg-fill;
+    width: 60vw;
+  }
 }
 
 @include medium {
-    .hero-shows {
-        height: 87vw;
-        padding: 0 24px;
-        &__small-title {
-            @include desk-tablet-header-smaller;
-            padding: 96px 0 20px;
-        }
-        &__large-title {
-            @include desk-tablet-header;
-            font-size: 6vw;
-            line-height: 4rem;
-        }
+  .hero-shows {
+    height: 87vw;
+    padding: 0 24px;
+    &__iframe {
+      width: 70%;
+      align-self: flex-start;
     }
+    &__small-title {
+      @include desk-tablet-header-smaller;
+      padding: 96px 0 20px;
+    }
+    &__large-title {
+      @include desk-tablet-header;
+      font-size: 6vw;
+      line-height: 4rem;
+    }
+  }
 }
 
 @include huge {
-    .hero-shows {
-        padding: 0 180px;
-        &__small-title {
-            padding: 160px 0 48px;
-            @include desk-tablet-header;
-        }
-        &__large-title {
-            line-height: 8rem;
-        }
+  .hero-shows {
+    padding: 0 180px;
+    // position: relative;
+    &__iframe {
+      //   position: absolute;
+      //   top: 24em;
+      //   right: 10em;
+      width: 30vw;
+      height: 10vw;
+      margin-left: 64px;
     }
+    &__small-title {
+      padding: 160px 0 48px;
+      @include desk-tablet-header;
+    }
+    &__large-title {
+      line-height: 8rem;
+      //   margin-right: 64px;
+    }
+  }
 }

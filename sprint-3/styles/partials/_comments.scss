@@ -1,0 +1,212 @@
+.comments {
+  margin: 32px 16px 40px;
+  &__title {
+    @include mobile-header;
+    margin-bottom: 40px;
+  }
+  &__form {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid $text-border;
+    width: 100%;
+  }
+  &__headshot-position {
+    margin-right: 16px;
+  }
+  &__headshot-img {
+    border-radius: 50%;
+    height: 16vw;
+    width: 17vw;
+  }
+  &__form-container {
+    &--title {
+      @include mobile-labels;
+      color: $text-label;
+      align-self: flex-start;
+    }
+    &--input {
+      border-radius: 4px;
+      border: 1px solid $text-border;
+      width: 70vw;
+      margin-bottom: 16px;
+      &.small {
+        height: 10vw;
+      }
+      &.large {
+        height: 40vw;
+      }
+      &:hover {
+        cursor: pointer;
+        border-color: $black;
+      }
+    }
+    &--button {
+      padding-bottom: 32px;
+      #button {
+        @include mobile-subheader;
+        border-radius: 4px;
+        border: 1px solid $paragraph;
+        color: $white;
+        background-color: $paragraph;
+        width: 70vw;
+        height: 10vw;
+        transition: background-color 0.5s ease-in-out;
+        &:hover {
+          cursor: pointer;
+          background-color: $black;
+        }
+      }
+    }
+  }
+  .comments-container {
+    &__holder {
+      display: flex;
+      border-bottom: 1px solid $text-border;
+      &--icon {
+        border-radius: 50%;
+        background: $text-border;
+        width: 13em;
+        height: 3em;
+        margin-top: 24px;
+      }
+    }
+    &--holder {
+      display: flex;
+      flex-direction: column;
+      margin-left: 1em;
+    }
+    &__name-and-date {
+      clear: both;
+      display: flex;
+      justify-content: space-between;
+    }
+    &__name {
+      @include mobile-subheader;
+      margin-top: 24px;
+    }
+    &__date {
+      @include mobile-labels;
+      color: $text-label;
+      font-family: AvenirRegular;
+      align-self: flex-end;
+    }
+    &__comment {
+      @include mobile-paragraph;
+      margin: 16px 0 24px;
+    }
+  }
+}
+
+@include medium {
+  .comments {
+    margin: 40px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // &__headshot-position {
+    //   // align-self: flex-start;
+    //   // width: 100px;
+    // }
+    &__title {
+      @include desk-tablet-header;
+      margin-bottom: 40px;
+      align-self: flex-start;
+    }
+    // &__headshot-position {
+    //   // position: relative;
+    // }
+    &__headshot-img {
+      // position: absolute;
+      // left: -17em;
+      height: 6vw;
+      width: 6vw;
+      // top: 0.5em;
+    }
+    &__form {
+      border-bottom: unset;
+      width: 70%;
+    }
+    &__form-input {
+      align-self: center;
+      width: 55vw;
+      &.small {
+        height: 5vw;
+      }
+      &.large {
+        height: 20vw;
+      }
+    }
+    &__form-title {
+      padding-left: 5vw;
+    }
+    &__form-button {
+      padding-right: 5vw;
+      #button {
+        width: 20vw;
+        height: 5vw;
+      }
+    }
+    .comments-container {
+      border-top: 1px solid $text-border;
+      width: 70%;
+      &__holder--icon {
+        width: 7em;
+      }
+      &__name-and-date {
+        justify-content: flex-start;
+      }
+      &__date {
+        margin-left: 1em;
+      }
+    }
+  }
+}
+
+@include huge {
+  .comments {
+    margin: 48px 180px 40px;
+    &__headshot-img {
+      height: 3vw;
+      width: 3vw;
+      left: -18em;
+      top: 1em;
+    }
+    &__form {
+      display: flex;
+      flex-direction: column;
+    }
+    &__form-input {
+      // align-self: center;
+      width: 32vw;
+      margin-bottom: 24px;
+      &.small {
+        height: 3vw;
+        // margin-left: 20px;
+      }
+      &.large {
+        height: 7vw;
+      }
+    }
+    &__form-title {
+      padding-left: 10.5vw;
+      align-self: flex-start;
+    }
+    &__form-button {
+      padding-right: 10.5vw;
+      #button {
+        width: 11vw;
+        height: 3vw;
+      }
+    }
+    .comments-container {
+      border-top: 1px solid $text-border;
+      width: 37vw;
+      &__holder--icon {
+        margin-top: 24px;
+        margin-right: 16px;
+        height: 3.5vw;
+        width: 7.5vw;
+      }
+    }
+  }
+}

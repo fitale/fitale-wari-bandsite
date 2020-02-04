@@ -1,0 +1,26 @@
+@import './partials/fonts';
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: AvenirRegular;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+@import './partials/colors';
+@import './partials/breakpoints';
+@import './partials/header';
+@import './partials/hero';
+@import './partials/about';
+@import './partials/photo-gallery';
+@import './partials/footer';
+@import './partials/hero-shows';
+@import './partials/show-section';
+@import './partials/comments';
