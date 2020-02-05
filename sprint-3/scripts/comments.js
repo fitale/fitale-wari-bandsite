@@ -5,20 +5,36 @@ const form = document.querySelector("form");
 form.addEventListener("submit", event => {
   event.preventDefault();
   commentContainer.innerHTML = "";
-  let newComment = {};
-  // newComment.className = "comments-container__holder";
-  newComment.name = event.target.name.value;
-  newComment.comment = event.target.comment.value;
-  let today = new Date();
-  newComment.date =
-    today.getMonth() + 1 + "/" + today.getDate() + "/" + today.getFullYear();
-  comments.unshift(newComment);
-  displayComment(comments);
-  document.querySelector(".comments__form").reset();
+  axios
+    .post(
+      "https://project-1-api.herokuapp.com/comments?api_key=ff2c3952-2d2f-46aa-8ac7-715ce6eddafa",
+      {
+        name: event.target.name.value,
+        comment: event.target.comment.value
+      }
+    )
+    .then(() => {
+      axios
+        .get(
+          "https://project-1-api.herokuapp.com/comments?api_key=ff2c3952-2d2f-46aa-8ac7-715ce6eddafa"
+        )
+        .then(function(response) {
+          comments = response.data;
+          displayComment(
+            comments.sort(function(a, b) {
+              return b.timestamp - a.timestamp;
+            })
+          );
+        });
+      document.querySelector(".comments__form").reset();
+    });
 });
 
 function displayComment(arr) {
   for (let i = 0; i < arr.length; i++) {
+    let t = new Date(arr[i]["timestamp"]);
+    timestampCon = t.getMonth() + 1 + "/" + t.getDate() + "/" + t.getFullYear();
+
     let commentHolder = document.createElement("div");
     commentHolder.className = "comments-container__holder";
     commentContainer.appendChild(commentHolder);
@@ -39,11 +55,8 @@ function displayComment(arr) {
     nameAndDateContainer.appendChild(name);
 
     let date = document.createElement("p");
-    date.innerHTML = arr[i]["timestamp"];
+    date.innerHTML = timestampCon;
     date.className = "comments-container__date";
-    // let timestampCon = document.querySelector("comments-container__date");
-    // let t = new Date(date.innerHTML * 1000);
-    // date = t.getMonth() + "/" + t.getDate() + "/" + t.getFullYear();
     nameAndDateContainer.appendChild(date);
     container.appendChild(nameAndDateContainer);
 
@@ -60,7 +73,11 @@ axios
   .get(
     "https://project-1-api.herokuapp.com/comments?api_key=ff2c3952-2d2f-46aa-8ac7-715ce6eddafa"
   )
-  .then(response => {
+  .then(function(response) {
     comments = response.data;
-    displayComment(comments);
+    displayComment(
+      comments.sort(function(a, b) {
+        return b.timestamp - a.timestamp;
+      })
+    );
   });

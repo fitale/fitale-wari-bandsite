@@ -11,31 +11,32 @@
     width: 100%;
   }
   &__headshot-position {
-    margin-right: 16px;
+    margin: 16px 16px 0 0;
   }
   &__headshot-img {
     border-radius: 50%;
-    height: 16vw;
-    width: 17vw;
+    height: 48px;
+    width: 48px;
   }
   &__form-container {
     &--title {
       @include mobile-labels;
       color: $text-label;
-      align-self: flex-start;
     }
     &--input {
       border-radius: 4px;
       border: 1px solid $text-border;
       width: 70vw;
       margin-bottom: 16px;
+      display: flex;
       &.small {
         height: 10vw;
       }
       &.large {
         height: 40vw;
       }
-      &:hover {
+      &:hover,
+      &:focus {
         cursor: pointer;
         border-color: $black;
       }
@@ -65,9 +66,10 @@
       &--icon {
         border-radius: 50%;
         background: $text-border;
-        width: 13em;
-        height: 3em;
+        width: 48px;
+        height: 48px;
         margin-top: 24px;
+        flex-shrink: 0;
       }
     }
     &--holder {
@@ -99,59 +101,42 @@
 
 @include medium {
   .comments {
-    margin: 40px 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    // &__headshot-position {
-    //   // align-self: flex-start;
-    //   // width: 100px;
-    // }
+    margin: 40px 24px;
     &__title {
       @include desk-tablet-header;
       margin-bottom: 40px;
       align-self: flex-start;
     }
-    // &__headshot-position {
-    //   // position: relative;
-    // }
-    &__headshot-img {
-      // position: absolute;
-      // left: -17em;
-      height: 6vw;
-      width: 6vw;
-      // top: 0.5em;
-    }
     &__form {
-      border-bottom: unset;
       width: 70%;
+      display: flex;
     }
-    &__form-input {
-      align-self: center;
-      width: 55vw;
-      &.small {
-        height: 5vw;
+    &__form-container {
+      width: 70%;
+      &--input {
+        align-self: center;
+        width: 100%;
+        &.small {
+          height: 5vw;
+        }
+        &.large {
+          height: 10vw;
+        }
       }
-      &.large {
-        height: 20vw;
-      }
-    }
-    &__form-title {
-      padding-left: 5vw;
-    }
-    &__form-button {
-      padding-right: 5vw;
-      #button {
-        width: 20vw;
-        height: 5vw;
+      &--button {
+        display: flex;
+        justify-content: flex-end;
+        #button {
+          width: 11vw;
+          height: 3vw;
+        }
       }
     }
     .comments-container {
-      border-top: 1px solid $text-border;
       width: 70%;
-      &__holder--icon {
-        width: 7em;
-      }
       &__name-and-date {
         justify-content: flex-start;
       }
@@ -165,23 +150,15 @@
 @include huge {
   .comments {
     margin: 48px 180px 40px;
-    &__headshot-img {
-      height: 3vw;
-      width: 3vw;
-      left: -18em;
-      top: 1em;
-    }
-    &__form {
-      display: flex;
-      flex-direction: column;
-    }
+    // &__form {
+    //   // display: flex;
+    //   // flex-direction: column;
+    // }
     &__form-input {
-      // align-self: center;
       width: 32vw;
       margin-bottom: 24px;
       &.small {
         height: 3vw;
-        // margin-left: 20px;
       }
       &.large {
         height: 7vw;
@@ -193,10 +170,6 @@
     }
     &__form-button {
       padding-right: 10.5vw;
-      #button {
-        width: 11vw;
-        height: 3vw;
-      }
     }
     .comments-container {
       border-top: 1px solid $text-border;
@@ -204,8 +177,6 @@
       &__holder--icon {
         margin-top: 24px;
         margin-right: 16px;
-        height: 3.5vw;
-        width: 7.5vw;
       }
     }
   }

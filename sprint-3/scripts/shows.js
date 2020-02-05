@@ -1,36 +1,3 @@
-let showTable = [
-  {
-    Date: "Mon Dec 17, 2018",
-    Venue: "Ronald Lane",
-    Location: "San Francisco, CA"
-  },
-  {
-    Date: "Tues Jul 18, 2019",
-    Venue: "Pier 3 East",
-    Location: "SanFrancisco, CA"
-  },
-  {
-    Date: "Fri Jul 22, 2019",
-    Venue: "View Loungue",
-    Location: "SanFrancisco, CA"
-  },
-  {
-    Date: "Wed Aug 11, 2019",
-    Venue: "Pres Club",
-    Location: "SanFrancisco, CA"
-  },
-  {
-    Date: "Sat Aug 12, 2019",
-    Venue: "Hyatt Regency",
-    Location: "SanFrancisco, CA"
-  },
-  {
-    Date: "Fri Sep 05, 2019",
-    Venue: "Moscow Center",
-    Location: "SanFrancisco, CA"
-  }
-];
-
 function table(arr) {
   let showSection = document.createElement("div");
   document.querySelector("main").appendChild(showSection);
@@ -132,6 +99,6 @@ axios
     "https://project-1-api.herokuapp.com/showdates?api_key=ff2c3952-2d2f-46aa-8ac7-715ce6eddafa"
   )
   .then(response => {
-    console.log(response.data);
+    // console.log(response.data);
     table(response.data);
   });
