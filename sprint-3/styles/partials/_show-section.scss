@@ -1,11 +1,8 @@
 .shows {
-  margin: 32px 16px 30px;
+  margin: 2rem 1rem 1.875rem;
   &__title {
     @include mobile-header;
-    margin: 0 0 40px;
-    &--header {
-      display: none;
-    }
+    margin: 0 0 2.5rem;
   }
   &__huge-bottom--header {
     display: none;
@@ -13,31 +10,31 @@
   &__div {
     display: flex;
     flex-direction: column;
-    margin: 0 0 20px;
+    margin: 0 0 1.25rem;
     &--header {
-      margin: 0 0 16px;
+      margin: 0 0 1rem;
       @include mobile-labels;
       color: $text-label;
     }
     &--date {
-      margin: 0 0 24px;
+      margin: 0 0 1.5rem;
       @include mobile-subheader;
     }
     &--venueCityLocation {
-      margin: 0 0 32px;
+      margin: 0 0 2rem;
       @include mobile-paragraph;
     }
     &--button-container {
       align-self: center;
-      border-bottom: 1px solid $text-border;
-      padding: 0 0 16px;
+      border-bottom: 0.0625rem solid $text-border;
+      padding: 0 0 1rem;
     }
     &--button {
       background-color: $paragraph;
       width: 90vw;
       height: 15vw;
       color: $white;
-      border-radius: 4px;
+      border-radius: 0.25rem;
       transition: background-color 0.5s ease-in-out;
       &:hover {
         cursor: pointer;
@@ -49,10 +46,10 @@
 
 @include medium {
   .shows {
-    margin: 0 24px 30px;
+    margin: 0 1.5rem 1.875rem;
     &__title {
       @include desk-tablet-header;
-      margin: 35px 0 0;
+      margin: 2.1875rem 0 0;
     }
     &__huge-bottom {
       display: unset;
@@ -73,15 +70,15 @@
     &__div {
       flex-direction: row;
       justify-content: space-between;
-      border-bottom: 1px solid $text-border;
+      border-bottom: 0.0625rem solid $text-border;
       &--header {
         display: none;
       }
       &--venueCityLocation,
       &--date {
         align-self: center;
-        width: 20vw;
-        margin-bottom: 24px;
+        width: 15vw;
+        margin-bottom: 1.5rem;
       }
       &--button-container {
         border-bottom: unset;
@@ -96,23 +93,27 @@
 
 @include huge {
   .shows {
-    margin: 0 180px 50px;
+    margin: 0 11.25rem 3.125rem;
     display: flex;
     justify-content: space-between;
     &__title {
-      margin-top: 48px;
+      margin-top: 3rem;
     }
     &__huge-bottom {
-      margin-top: 20px;
+      margin-top: 1.25rem;
       margin-left: auto;
 
       &--header-title {
-        margin-bottom: 40px;
+        margin-bottom: 2.5rem;
         width: 10vw;
       }
     }
     &__div {
       width: 56vw;
+      &--venueCityLocation,
+      &--date {
+        width: 10em;
+      }
       &--button {
         width: 11vw;
         height: 3vw;

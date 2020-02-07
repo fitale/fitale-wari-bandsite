@@ -99,6 +99,5 @@ axios
     "https://project-1-api.herokuapp.com/showdates?api_key=ff2c3952-2d2f-46aa-8ac7-715ce6eddafa"
   )
   .then(response => {
-    // console.log(response.data);
     table(response.data);
   });

@@ -1,61 +1,65 @@
 .gallery {
+  display: flex;
+  flex-direction: column;
+  background-color: $text-bg-fill;
+  padding-bottom: 2.5rem;
+  &__title {
+    align-self: flex-start;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    margin-left: 1rem;
+    @include mobile-header;
+  }
+  &__row {
     display: flex;
     flex-direction: column;
-    background-color: $text-bg-fill;
-    padding-bottom: 40px;
-    &__title {
-        align-self: flex-start;
-        margin-top: 32px;
-        margin-bottom: 24px;
-        margin-left: 16px;
-        @include mobile-header;
+    justify-content: center;
+    align-items: center;
+  }
+  &__photo {
+    width: 90vw;
+    height: auto;
+    margin-bottom: 1rem;
+    filter: grayscale(100%);
+    &:hover {
+      filter: unset;
     }
-    &__row {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    &__photo {
-        width: 90vw;
-        height: auto;
-        margin-bottom: 16px;
-    }
+  }
 }
 
 @include medium {
-    .gallery {
-        padding: 0 24px 30px;
-        &__title {
-            @include desk-tablet-header;
-            margin: 40px 0 60px;
-        }
-        &__row {
-            flex-direction: row;
-            justify-content: center;
-        }
-        &__photo {
-            width: 29vw;
-            height: 16vw;
-            margin-bottom: 24px;
-            &.center {
-                margin-left: 24px;
-                margin-right: 24px;
-            }
-        }
+  .gallery {
+    padding: 0 1.5rem 1.875rem;
+    &__title {
+      @include desk-tablet-header;
+      margin: 2.5rem 0 3.75rem;
     }
+    &__row {
+      flex-direction: row;
+      justify-content: center;
+    }
+    &__photo {
+      width: 29vw;
+      height: 16vw;
+      margin-bottom: 1.5rem;
+      &.center {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+      }
+    }
+  }
 }
 
 @include huge {
-    .gallery {
-        padding: 0 180px 40px;
-        &__title {
-            margin: 48px 0 64px;
-        }
-        &__photo {
-            width: 24vw;
-            height: 13vw;
-            margin-bottom: 24px;
-        }
+  .gallery {
+    padding: 0 11.25rem 2.5rem;
+    &__title {
+      margin: 3rem 0 4rem;
     }
+    &__photo {
+      width: 24vw;
+      height: 13vw;
+      margin-bottom: 1.5rem;
+    }
+  }
 }

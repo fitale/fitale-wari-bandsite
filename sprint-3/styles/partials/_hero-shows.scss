@@ -1,73 +1,72 @@
 .hero-shows {
-  background-image: url("../assets/images/Screen Shot 2020-01-29 at 2.54.21 PM.png");
+  background-image: url("../assets/images/mathew-schwartz-5RHbXOXNd5w-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 472px;
+  height: 29.5rem;
   width: 100%;
   margin: 0;
-  padding: 0 16px;
+  padding: 0 1rem;
   display: flex;
   flex-direction: column;
-  &__iframe {
-    align-self: center;
-    width: 90vw;
-    height: 10em;
-  }
+  align-items: flex-start;
   &__small-title {
     @include mobile-subheader;
-    padding: 64px 0 10px;
+    padding: 4rem 0 0.625rem;
     margin: 0;
     color: $text-bg-fill;
   }
   &__large-title {
     @include mobile-header;
-    padding-bottom: 64px;
+    padding-bottom: 4rem;
     margin: 0;
     color: $text-bg-fill;
-    width: 60vw;
+    width: 85%;
   }
 }
 
 @include medium {
   .hero-shows {
-    height: 87vw;
-    padding: 0 24px;
+    padding: 0 1.5rem;
+    height: 41.875rem;
     &__iframe {
-      width: 70%;
+      width: 50%;
       align-self: flex-start;
     }
     &__small-title {
       @include desk-tablet-header-smaller;
-      padding: 96px 0 20px;
+      padding: 6rem 0 1.25rem;
     }
     &__large-title {
-      @include desk-tablet-header;
-      font-size: 6vw;
-      line-height: 4rem;
+      @include desk-tablet-hero;
+      width: 70%;
     }
   }
 }
 
 @include huge {
   .hero-shows {
-    padding: 0 180px;
-    // position: relative;
+    padding: 0 11.25rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    &__container {
+      height: 429px;
+      &--bottom {
+        align-self: center;
+      }
+    }
     &__iframe {
-      //   position: absolute;
-      //   top: 24em;
-      //   right: 10em;
-      width: 30vw;
-      height: 10vw;
-      margin-left: 64px;
+      width: 436px;
+      height: 146px;
     }
     &__small-title {
-      padding: 160px 0 48px;
+      padding: 10rem 0 3rem;
       @include desk-tablet-header;
     }
     &__large-title {
-      line-height: 8rem;
-      //   margin-right: 64px;
+      margin-right: 4rem;
+      width: unset;
     }
   }
 }

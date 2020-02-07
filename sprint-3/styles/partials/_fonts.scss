@@ -1,80 +1,79 @@
 @font-face {
-    font-family: 'AvenirRegular';
-    src: url('../assets/fonts/AvenirNextLTProRegular.otf');
+  font-family: "AvenirRegular";
+  src: url("../assets/fonts/AvenirNextLTProRegular.otf");
 }
 
 @font-face {
-    font-family: 'AvenirBold';
-    src: url('../assets/fonts/AvenirNextLTProBold.otf');
+  font-family: "AvenirBold";
+  src: url("../assets/fonts/AvenirNextLTProBold.otf");
 }
 
 @font-face {
-    font-family: 'AvenirDemi';
-    src: url('../assets/fonts/AvenirNextLTProDemi.otf');
+  font-family: "AvenirDemi";
+  src: url("../assets/fonts/AvenirNextLTProDemi.otf");
 }
 
 @mixin mobile-header {
-    font-size: 24px;
-    line-height: 32px;
-    font-family: AvenirBold;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: AvenirBold;
 }
 
 @mixin mobile-subheader {
-    font-size: 14px;
-    line-height: 22px;
-    font-family: AvenirDemi;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: AvenirDemi;
 }
 
 @mixin mobile-paragraph {
-    font-size: 13px;
-    line-height: 18px;
-    font-family: AvenirRegular;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: AvenirRegular;
 }
 
 @mixin mobile-labels {
-    font-size: 12px;
-    line-height: 20px;
-    font-family: AvenirDemi;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-family: AvenirDemi;
 }
 
-
 @mixin desk-tablet-hero {
-    font-size: 60px;
-    line-height: 68px;
-    font-family: AvenirBold;
+  font-size: 3.75rem;
+  line-height: 4.25rem;
+  font-family: AvenirBold;
 }
 
 @mixin desk-tablet-header {
-    font-size: 36px;
-    line-height: 44px;
-    font-family: AvenirBold;
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  font-family: AvenirBold;
 }
 
 @mixin desk-tablet-header-smaller {
-    font-size: 24px;
-    line-height: 32px;
-    font-family: AvenirBold;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: AvenirBold;
 }
 
 @mixin desk-tablet-subheader {
-    font-size: 16px;
-    line-height: 24px;
-    font-family: AvenirDemi;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: AvenirDemi;
 }
 
 @mixin desk-tablet-para-comment {
-    font-size: 14px;
-    line-height: 22px;
-    font-family: AvenirRegular;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: AvenirRegular;
 }
 
 @mixin desk-tablet-lists-contact {
-    font-size: 14px;
-    line-height: 20px;
-    font-family: AvenirRegular;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-family: AvenirRegular;
 }
 
 @mixin desk-tablet-labels {
-    font-size: 12px;
-    line-height: 20px;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
 }
