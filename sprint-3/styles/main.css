@@ -871,14 +871,14 @@ body {
 }
 
 .comments {
-  margin: 32px 16px 40px;
+  margin: 2rem 1rem 2.5rem;
 }
 
 .comments__title {
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: AvenirBold;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 
 .comments__form {
@@ -888,18 +888,18 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-bottom: 1px solid #e1e1e1;
+  border-bottom: 0.0625rem solid #e1e1e1;
   width: 100%;
 }
 
 .comments__headshot-position {
-  margin: 16px 16px 0 0;
+  margin: 1rem 1rem 0 0;
 }
 
 .comments__headshot-img {
   border-radius: 50%;
-  height: 48px;
-  width: 48px;
+  height: 3rem;
+  width: 3rem;
 }
 
 .comments__form-container--title {
@@ -910,21 +910,21 @@ body {
 }
 
 .comments__form-container--input {
-  border-radius: 4px;
-  border: 1px solid #e1e1e1;
+  border-radius: 0.25rem;
+  border: 0.0625rem solid #e1e1e1;
   width: 70vw;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 .comments__form-container--input.small {
-  height: 10vw;
+  height: 2.5rem;
 }
 
 .comments__form-container--input.large {
-  height: 40vw;
+  height: 7.8125rem;
 }
 
 .comments__form-container--input:hover, .comments__form-container--input:focus {
@@ -933,15 +933,15 @@ body {
 }
 
 .comments__form-container--button {
-  padding-bottom: 32px;
+  padding-bottom: 2rem;
 }
 
 .comments__form-container--button #button {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-family: AvenirDemi;
-  border-radius: 4px;
-  border: 1px solid #323232;
+  border-radius: 0.25rem;
+  border: 0.0625rem solid #323232;
   color: #fff;
   background-color: #323232;
   width: 70vw;
@@ -959,15 +959,15 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-bottom: 1px solid #e1e1e1;
+  border-bottom: 0.0625rem solid #e1e1e1;
 }
 
 .comments .comments-container__holder--icon {
   border-radius: 50%;
   background: #e1e1e1;
-  width: 48px;
-  height: 48px;
-  margin-top: 24px;
+  width: 3rem;
+  height: 3rem;
+  margin-top: 1.5rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
@@ -981,6 +981,10 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-left: 1em;
+  margin-bottom: 1.5rem;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
 }
 
 .comments .comments-container__name-and-date {
@@ -997,7 +1001,7 @@ body {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-family: AvenirDemi;
-  margin-top: 24px;
+  margin-top: 1.5rem;
 }
 
 .comments .comments-container__date {
@@ -1014,7 +1018,19 @@ body {
   font-size: 0.8125rem;
   line-height: 1.125rem;
   font-family: AvenirRegular;
-  margin: 16px 0 24px;
+  margin: 0;
+}
+
+.comments .comments-container__delete {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.comments .comments-container__delete .delete {
+  border-radius: 10rem;
+  border: 0.0625rem solid #afafaf;
+  background-color: #afafaf;
+  color: #fff;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1029,13 +1045,13 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 40px 24px;
+    margin: 2.5rem 1.5rem;
   }
   .comments__title {
     font-size: 2.25rem;
     line-height: 2.75rem;
     font-family: AvenirBold;
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
     -ms-flex-item-align: start;
         align-self: flex-start;
   }
@@ -1055,10 +1071,10 @@ body {
     width: 100%;
   }
   .comments__form-container--input.small {
-    height: 5vw;
+    height: 2.5rem;
   }
   .comments__form-container--input.large {
-    height: 10vw;
+    height: 5rem;
   }
   .comments__form-container--button {
     display: -webkit-box;
@@ -1073,7 +1089,7 @@ body {
     height: 3vw;
   }
   .comments .comments-container {
-    width: 70%;
+    width: 50%;
   }
   .comments .comments-container__name-and-date {
     -webkit-box-pack: start;
@@ -1087,17 +1103,17 @@ body {
 
 @media only screen and (min-width: 1440px) {
   .comments {
-    margin: 48px 180px 40px;
+    margin: 3rem 11.25rem 2.5rem;
   }
   .comments__form-input {
     width: 32vw;
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
   }
   .comments__form-input.small {
-    height: 3vw;
+    height: 3rem;
   }
   .comments__form-input.large {
-    height: 7vw;
+    height: 6rem;
   }
   .comments__form-title {
     padding-left: 10.5vw;
@@ -1108,12 +1124,11 @@ body {
     padding-right: 10.5vw;
   }
   .comments .comments-container {
-    border-top: 1px solid #e1e1e1;
     width: 37vw;
   }
   .comments .comments-container__holder--icon {
-    margin-top: 24px;
-    margin-right: 16px;
+    margin-top: 1.5rem;
+    margin-right: 1rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

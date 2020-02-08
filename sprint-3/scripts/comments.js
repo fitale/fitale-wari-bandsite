@@ -14,18 +14,7 @@ form.addEventListener("submit", event => {
       }
     )
     .then(() => {
-      axios
-        .get(
-          "https://project-1-api.herokuapp.com/comments?api_key=ff2c3952-2d2f-46aa-8ac7-715ce6eddafa"
-        )
-        .then(function(response) {
-          comments = response.data;
-          displayComment(
-            comments.sort(function(a, b) {
-              return b.timestamp - a.timestamp;
-            })
-          );
-        });
+      getComment();
       document.querySelector(".comments__form").reset();
     });
 });
@@ -65,19 +54,47 @@ function displayComment(arr) {
     comment.className = "comments-container__comment";
     container.appendChild(comment);
 
+    let deleteButtonContainer = document.createElement("div");
+    deleteButtonContainer.className = "comments-container__delete";
+    let deleteButton = document.createElement("button");
+    deleteButton.innerHTML = "delete";
+    deleteButtonContainer.appendChild(deleteButton);
+    container.appendChild(deleteButtonContainer);
+    deleteButton.id = arr[i]["id"];
+    deleteButton.className = "delete";
+    deleteButton.addEventListener("click", event => {
+      let deleteId = event.target.id;
+      deleteComment(deleteId);
+    });
+
     commentHolder.appendChild(container);
   }
 }
 
-axios
-  .get(
-    "https://project-1-api.herokuapp.com/comments?api_key=ff2c3952-2d2f-46aa-8ac7-715ce6eddafa"
-  )
-  .then(function(response) {
-    comments = response.data;
-    displayComment(
-      comments.sort(function(a, b) {
-        return b.timestamp - a.timestamp;
-      })
-    );
-  });
+function getComment() {
+  axios
+    .get(
+      "https://project-1-api.herokuapp.com/comments?api_key=ff2c3952-2d2f-46aa-8ac7-715ce6eddafa"
+    )
+    .then(function(response) {
+      comments = response.data;
+      displayComment(
+        comments.sort(function(a, b) {
+          return b.timestamp - a.timestamp;
+        })
+      );
+    });
+}
+
+getComment();
+
+function deleteComment(id) {
+  axios
+    .delete(
+      `https://project-1-api.herokuapp.com/comments/${id}?api_key=ff2c3952-2d2f-46aa-8ac7-715ce6eddafa`
+    )
+    .then(response => {
+      commentContainer.innerHTML = "";
+      getComment();
+    });
+}
