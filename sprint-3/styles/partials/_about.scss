@@ -1,121 +1,121 @@
 .about {
-    @include mobile-header;
-    margin: 0 16px;
+  @include mobile-header;
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__title {
+    align-self: flex-start;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  &__image {
+    align-self: center;
+    &--size {
+      width: 90vw;
+    }
+  }
+  &__quote {
+    @include mobile-subheader;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    &--artist {
+      margin: 0;
+      @include mobile-subheader;
+    }
+  }
+  &__artist {
+    @include mobile-subheader;
+    margin: 2.5rem 0 1.5rem;
+  }
+  &__container {
+    @include mobile-paragraph;
+    font-family: AvenirRegular;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    &__title {
-        align-self: flex-start;
-        margin-top: 32px;
-        margin-bottom: 24px;
+    &--paragraph {
+      margin-top: 0;
+      &.right {
+        margin-bottom: 2.5rem;
+      }
     }
-    &__image {
-        align-self: center;
-        &--size {
-            width: 90vw;
-        }
-    }
-    &__quote {
-        @include mobile-subheader;
-        margin-top: 24px;
-        margin-bottom: 32px;
-        &--artist {
-            margin: 0;
-            @include mobile-subheader;
-        }
-    }
-    &__artist {
-        @include mobile-subheader;
-        margin: 40px 0 24px;
-    }
-    &__container {
-        @include mobile-paragraph;
-        font-family: AvenirRegular;
-        display: flex;
-        flex-direction: column;
-        &--paragraph {
-            margin-top: 0;
-            &.right {
-                margin-bottom: 40px;
-            }
-        }
-    }
+  }
 }
 
 @include medium {
-    .about {
-        margin: 0 24px;
-        &__title {
-            @include desk-tablet-header;
-            margin-top: 60px;
-            margin-bottom: 40px;
-        }
-        &__image {
-                &--size {
-                    width: 94vw;
-                    height: 47vw;
-                    object-fit: cover;
-                }
-        }
-        &__quote {
-            @include desk-tablet-header-smaller;
-            &--artist {
-                @include desk-tablet-subheader;
-                font-family: AvenirDemi;
-            }
-        }
-        &__artist {
-            @include desk-tablet-header-smaller;
-        }
-        &__container {
-            margin-bottom: 40px;
-            flex-direction: row;
-            &--paragraph {
-                &.left {
-                    margin-right: 12px;
-                    margin-bottom: 0;
-                }
-                &.right {
-                    margin-left: 12px;
-                    margin-bottom: 0;
-                }
-            }
-        }
+  .about {
+    margin: 0 1.5rem;
+    &__title {
+      @include desk-tablet-header;
+      margin-top: 3.75rem;
+      margin-bottom: 2.5rem;
     }
+    &__image {
+      &--size {
+        width: 94vw;
+        height: 47vw;
+        object-fit: cover;
+      }
+    }
+    &__quote {
+      @include desk-tablet-header-smaller;
+      &--artist {
+        @include desk-tablet-subheader;
+        font-family: AvenirDemi;
+      }
+    }
+    &__artist {
+      @include desk-tablet-header-smaller;
+    }
+    &__container {
+      margin-bottom: 2.5rem;
+      flex-direction: row;
+      &--paragraph {
+        &.left {
+          margin-right: 0.75rem;
+          margin-bottom: 0;
+        }
+        &.right {
+          margin-left: 0.75rem;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
 }
 
 @include huge {
-    .about {
-        margin: 0 180px;
-        &__title {
-            margin: 48px 0;
-        }
-        &__image {
-            &--size {
-                width: 62vw;
-                height: 31vw;
-            }
-        }
-        &__quote {
-            margin: 48px 92px 40px;
-            &--artist {
-                margin: 0 92px;
-            }
-        }
-        &__artist {
-            margin: 56px 92px 32px;
-        }
-        &__container {
-            margin-bottom: 0;
-            &--paragraph {
-                width: 29vw;
-                &.left {
-                    margin: 0 20px 48px 92px;
-                }
-                &.right {
-                    margin: 0 92px 48px 20px;
-                }
-            }
-        }
+  .about {
+    margin: 0 11.25rem;
+    &__title {
+      margin: 3rem 0;
     }
+    &__image {
+      &--size {
+        width: 62vw;
+        height: 31vw;
+      }
+    }
+    &__quote {
+      margin: 3rem 5.75rem 2.5rem;
+      &--artist {
+        margin: 0 5.75rem;
+      }
+    }
+    &__artist {
+      margin: 3.5rem 5.75rem 2rem;
+    }
+    &__container {
+      margin-bottom: 0;
+      &--paragraph {
+        width: 29vw;
+        &.left {
+          margin: 0 1.25rem 3rem 5.75rem;
+        }
+        &.right {
+          margin: 0 5.75rem 3rem 1.25rem;
+        }
+      }
+    }
+  }
 }

@@ -1,65 +1,66 @@
 .header {
-    background-color: $paragraph;
-    height: 80px;
-    width: 100%;            
-    text-align: center;
-    &__title {
-        @include mobile-header;
-        font-size: unset;
-        margin-top: 0;
-        margin-bottom: 16px;
-        &--image {
-            width: 125px;
-            margin-top: 5px;
-        }
+  background-color: $paragraph;
+  height: 5rem;
+  width: 100%;
+  text-align: center;
+  &__title {
+    @include mobile-header;
+    font-size: unset;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    &--image {
+      width: 7.8125rem;
+      margin-top: 0.3125rem;
     }
-    &__nav {
-        display: flex;
+  }
+  &__nav {
+    display: flex;
+  }
+  &__nav-item {
+    width: 50%;
+    color: $text-label;
+    margin: 0;
+    padding-bottom: 0.125rem;
+    @include mobile-subheader;
+    border-bottom: 0.25rem solid transparent;
+
+    &:hover {
+      cursor: pointer;
+      border-bottom: 0.25rem solid $white;
     }
-    &__nav-item {
-            width: 50%;
-            color: $text-label;
-            margin: 0;
-            padding-bottom: 2px;
-            @include mobile-subheader;
-            border-bottom: 4px solid transparent;
-            &:hover {
-            cursor: pointer;
-            border-bottom: 4px solid $white;
-            }
-            &.active {
-                cursor: pointer;
-                border-bottom: 4px solid $white;
-            }
-            &--link {
-                text-decoration: none;
-                color: unset;
-            }
-        }
+    &.active {
+      cursor: pointer;
+      border-bottom: 0.25rem solid $white;
+    }
+    &--link {
+      text-decoration: none;
+      color: unset;
+    }
+  }
 }
 
 @include medium {
-    .header {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        padding-left: 24px;
-        &__nav-item {
-            margin-left: 50px;
-            width: 70px;
-            @include desk-tablet-subheader;
-            padding: 25.5px 0;
-        }
+  .header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 1.5rem;
+    &__nav-item {
+      margin-left: 3.125rem;
+      width: 4.375rem;
+      @include desk-tablet-subheader;
+      padding: 1.5938rem 0;
     }
+  }
 }
 
 @include huge {
-    .header {
-        width: 100%;
-        padding-left: 180px;
-        &__nav-item {
-            margin-left: 56px;
-            width: 80px;
-        }
+  .header {
+    width: 100%;
+    padding-left: 11.25rem;
+    &__nav-item {
+      margin-left: 3.5rem;
+      width: 5rem;
     }
+  }
 }

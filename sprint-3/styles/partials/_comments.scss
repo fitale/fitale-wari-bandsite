@@ -34,6 +34,7 @@
       }
       &.large {
         height: 7.8125rem;
+        resize: vertical;
       }
       &:hover,
       &:focus {
@@ -130,7 +131,6 @@
       &--input {
         align-self: center;
         width: 100%;
-        // width: 28.75rem;
         &.small {
           height: 2.5rem;
         }

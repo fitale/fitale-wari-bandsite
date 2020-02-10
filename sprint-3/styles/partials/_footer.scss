@@ -1,20 +1,20 @@
 .footer {
   background-color: $paragraph;
   color: $text-bg-fill;
-  padding: 0 16px 30px;
+  padding: 0 1rem 1.875rem;
   &__logo {
     display: none;
   }
   &__title {
     @include mobile-header;
     color: $text-bg-fill;
-    padding: 40px 0 20px;
+    padding: 2.5rem 0 1.25rem;
     margin: 0;
   }
   &__icon {
-    padding-bottom: 20px;
+    padding-bottom: 1.25rem;
     &--size {
-      margin-right: 24px;
+      margin-right: 1.5rem;
     }
   }
   &__container-bottom {
@@ -37,17 +37,17 @@
   &__copyright {
     @include mobile-paragraph;
     color: $text-label;
-    width: 220px;
+    width: 13.75rem;
   }
 }
 
 @include medium {
   .footer {
-    padding: 30px 24px;
+    padding: 1.875rem 1.5rem;
     &__logo {
       float: right;
       width: 15vw;
-      margin-top: 50px;
+      margin-top: 3.125rem;
       display: unset;
     }
     &__container-top {
@@ -58,8 +58,8 @@
       @include desk-tablet-header;
     }
     &__icon {
-      padding: 25px 0 0;
-      margin-left: 72px;
+      padding: 1.5625rem 0 0;
+      margin-left: 4.5rem;
       &--size {
         width: 3vw;
         height: 3vw;
@@ -85,47 +85,47 @@
 
 @include huge {
   .footer {
-    padding: 48px 180px 40px;
+    padding: 3rem 11.25rem 2.5rem;
     &__container-top {
-      margin-bottom: 56px;
+      margin-bottom: 3.5rem;
     }
     &__logo {
       width: 8vw;
       height: 2vw;
-      margin: 11px 0 0;
+      margin: 0.6875rem 0 0;
     }
     &__title {
       padding: 0;
     }
     &__icon {
-      padding: 8px 0 0;
-      margin-left: 85px;
+      padding: 0.5rem 0 0;
+      margin-left: 5.3125rem;
       &--size {
         margin: 0;
         width: 1.5vw;
         height: 1.5vw;
       }
       &--size.special {
-        margin-left: 32px;
-        margin-right: 32px;
+        margin-left: 2rem;
+        margin-right: 2rem;
       }
     }
     &__container-bottom {
       justify-content: flex-start;
-      margin: 0 0 40px;
+      margin: 0 0 2.5rem;
       &--width {
-        margin-right: 80px;
+        margin-right: 5rem;
       }
     }
     &__name {
       margin: 0;
-      margin-bottom: 24px;
+      margin-bottom: 1.5rem;
     }
     &__contact {
       margin: 0;
     }
     &__contact.email {
-      margin-top: 30px;
+      margin-top: 1.875rem;
     }
     &__copyright {
       margin: 0;
